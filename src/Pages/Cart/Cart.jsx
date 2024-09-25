@@ -1,10 +1,10 @@
 import { useContext } from "react";
 import "./Cart.css";
-import { SotreContext } from "../../Context/StoreContext";
+import { StoreContext } from "../../Context/StoreContext";
 import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
-  const { carItems, food_list, removeFromCart, getTotalCartAmount} = useContext(SotreContext);
+  const { carItems, food_list, removeFromCart, getTotalCartAmount} = useContext(StoreContext);
 
   const navigate = useNavigate()
   return (

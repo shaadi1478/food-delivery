@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 import { food_list } from "../assets/assets";
-export const SotreContext = createContext(null);
+export const StoreContext = createContext(null);
 
 const SotreContextProvider = (props) => {
   const [carItems, setCartItems] = useState({});
@@ -28,19 +28,23 @@ const SotreContextProvider = (props) => {
     return totalAmout
   };
 
+
   const contextValu = {
     food_list,
     carItems,
     setCartItems,
     addToCart,
     removeFromCart,
-    getTotalCartAmount
+    getTotalCartAmount,
   };
   return (
-    <SotreContext.Provider value={contextValu}>
+
+    
+    <StoreContext.Provider value={contextValu}>
       {props.children}
-    </SotreContext.Provider>
+    </StoreContext.Provider>
   );
 };
 
 export default SotreContextProvider;
+

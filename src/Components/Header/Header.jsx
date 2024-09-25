@@ -2,12 +2,12 @@ import './Header.css'
 import {assets} from '../../assets/assets'
 import {useContext, useState} from  'react'
 import { Link } from 'react-router-dom';
-import { SotreContext } from '../../Context/StoreContext';
+import { StoreContext } from '../../Context/StoreContext';
 const Header = ({setShowLogin}) => {
 
     const [menu, setMenu] = useState("menu");
 
-    const {getTotalCartAmount} = useContext(SotreContext)
+    const {getTotalCartAmount} = useContext(StoreContext)
 
     return (
         <div className='navbar'>
